@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.annotation.processing.SupportedAnnotationTypes;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 public class MathUtilsTest {
@@ -22,5 +24,9 @@ public class MathUtilsTest {
     @Test
     void test3(){
         assertThrows(ArithmeticException.class, () -> {math.divide(2, 0);});
+    }
+    @Test
+    void test4(){
+        assertEquals(12, math.add(6, 6));
     }
 }
